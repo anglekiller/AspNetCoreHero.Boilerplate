@@ -1,13 +1,14 @@
 ﻿using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
+using AspNetCoreHero.Boilerplate.Domain.Entities.Learn;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AspNetCoreHero.Boilerplate.Application.Interfaces.CacheRepositories
 {
-    public interface IProductCacheRepository
+    public interface ITeacherCacheRepository
     {
-        Task<List<Product>> GetCachedListAsync();
+        Task<List<Teacher>> GetCachedListAsync();
 
-        Task<Product> GetByIdAsync(int productId);
+        Task<Brand> GetByIdAsync(int teacherId);
     }
 }

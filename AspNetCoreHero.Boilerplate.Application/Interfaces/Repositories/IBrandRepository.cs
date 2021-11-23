@@ -1,22 +1,23 @@
 ﻿using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
+using AspNetCoreHero.Boilerplate.Domain.Entities.Learn;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace AspNetCoreHero.Boilerplate.Application.Interfaces.Repositories
 {
-    public interface IBrandRepository
+    public interface IStudentRepository
     {
-        IQueryable<Brand> Brands { get; }
+        IQueryable<Student> Students { get; }
 
-        Task<List<Brand>> GetListAsync();
+        Task<List<Student>> GetListAsync();
 
-        Task<Brand> GetByIdAsync(int brandId);
+        Task<Student> GetByIdAsync(int StudentId);
 
-        Task<int> InsertAsync(Brand brand);
+        Task<int> InsertAsync(Student Student);
 
-        Task UpdateAsync(Brand brand);
+        Task UpdateAsync(Student Student);
 
-        Task DeleteAsync(Brand brand);
+        Task DeleteAsync(Student Student);
     }
 }
